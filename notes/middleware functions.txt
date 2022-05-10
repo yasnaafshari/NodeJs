@@ -1,0 +1,17 @@
+const morgan = require('morgan');
+const helmet = require('helmet');
+const logger = require('./logger');
+// for logging http requests 
+app.use(morgan('tiny'));
+//or with customization to skip some situations with a method called skip:
+app.use(morgan('combined', {
+    skip: function (req, res) { return res.statusCode < 400 }
+}));
+// for http header customization and security
+app.use(helmet());
+
+// for key-value requests, not very common now
+app.use(express.urlencoded({ extended: true }));
+app.use(logger);
+//for storing and using static files 
+app.use(express.static('public'));

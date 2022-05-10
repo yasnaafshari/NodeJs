@@ -18,9 +18,13 @@
   },
   "homepage": "https://github.com/yasnaafshari/NodeJs#readme",
   "dependencies": {
+    "config": "^3.3.7",
+    "debug": "^4.3.4",
     "express": "^4.18.1",
+    "helmet": "^5.0.2",
     "joi": "^13.7.0",
     "mongoose": "^6.3.3",
+    "morgan": "^1.10.0",
     "underscore": "^1.13.3"
   },
   "devDependencies": {
